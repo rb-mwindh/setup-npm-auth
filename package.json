@@ -1,0 +1,35 @@
+{
+  "name": "@rb-mwindh/setup-npm-auth",
+  "version": "1.0.0",
+  "description": "CLI to discover configured npm registries write authToken to user config",
+  "author": "Markus Windhager",
+  "license": "MIT",
+  "keywords": [
+    "npm",
+    "auth",
+    "cli",
+    "tool"
+  ],
+  "type": "module",
+  "bin": {
+    "setup-npm-auth": "./bin/index.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "package.json",
+    "package-lock.json"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "npx setup-npm-auth",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@actions/core": "^2.0.2",
+    "@actions/exec": "^2.0.0",
+    "commander": "^14.0.2"
+  }
+}

@@ -1,0 +1,21 @@
+name: 'Setup NPM Auth'
+description: 'Configures NPM authentication for different registries'
+author: 'Markus Windhager'
+inputs:
+  include:
+    description: 'Registries, e.g. default, publish, @scope=ENV'
+    required: false
+  location:
+    description: 'npm config location (user, global, project)'
+    required: false
+  dry-run:
+    description: 'Show what would be done, but do not execute'
+    required: false
+    default: 'false'
+  verbose:
+    description: 'Show more output'
+    required: false
+    default: 'false'
+runs:
+  using: 'node20'
+  main: 'dist/action-entrypoint.cjs'
