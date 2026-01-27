@@ -17,8 +17,10 @@
   "files": [
     "bin/",
     "src/",
+    "action.yml",
     "package.json",
-    "package-lock.json"
+    "package-lock.json",
+    "README.md"
   ],
   "engines": {
     "node": ">=18"
