@@ -41,8 +41,7 @@
   "scripts": {
     "start": "npx setup-npm-auth",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ncc build src/action-entrypoint.mjs -o dist --minify --license licenses.txt",
-    "prepare": "npm run build"
+    "build": "ncc build src/action-entrypoint.mjs -o dist --minify --license licenses.txt"
   },
   "dependencies": {
     "@actions/core": "^2.0.2",
