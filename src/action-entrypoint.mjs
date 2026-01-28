@@ -1,4 +1,4 @@
-import core from '@actions/core';
+import * as core from '@actions/core';
 import {exec} from '@actions/exec';
 
 async function run() {
@@ -31,5 +31,5 @@ async function run() {
 
 run().catch(err => {
     core.error(err);
-    core.setFailed(error.message);
+    core.setFailed(err instanceof Error ? err.message : String(err));
 });

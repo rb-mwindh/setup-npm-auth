@@ -75,6 +75,21 @@ You can use this tool as a declarative GitHub Action in your workflows:
 - `dry-run`: Show what would be done, but do not execute
 - `verbose`: Show more output
 
+## Development
+
+### Building the Action
+
+This action uses [@vercel/ncc](https://github.com/vercel/ncc) to bundle all runtime dependencies into a single file. The bundled output is committed to the repository in the `dist/` directory because GitHub Actions require all code and dependencies to be present in the repository.
+
+To build the action after making changes:
+
+```bash
+npm ci
+npm run build
+```
+
+The `dist/` directory is intentionally committed to version control, as this is required for JavaScript GitHub Actions to work on self-hosted runners without requiring `npm install`.
+
 ## License
 
 MIT © Markus Windhager

@@ -18,13 +18,14 @@
   "files": [
     "bin/",
     "src/",
+    "dist/",
     "action.yml",
     "package.json",
     "package-lock.json",
     "README.md"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "publishConfig": {
     "access": "public"
@@ -39,11 +40,15 @@
   },
   "scripts": {
     "start": "npx setup-npm-auth",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/action-entrypoint.mjs -o dist --minify --license licenses.txt"
   },
   "dependencies": {
     "@actions/core": "^2.0.2",
     "@actions/exec": "^2.0.0",
     "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
   }
 }
