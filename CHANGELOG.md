@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.6...v1.2.7) (2026-01-28)
+
+
+### Bug Fixes
+
+* **build:** avoid executing unbundled script in GitHub Action ([5499273](https://github.com/rb-mwindh/setup-npm-auth/commit/54992734e58c07bdab2cdf584c37186a16069aaf))
+
 ## [1.2.6](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.5...v1.2.6) (2026-01-28)
 
 

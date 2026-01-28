@@ -1,6 +1,6 @@
 {
   "name": "@rb-mwindh/setup-npm-auth",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "CLI to discover configured npm registries write authToken to user config",
   "author": "Markus Windhager",
   "license": "MIT",
