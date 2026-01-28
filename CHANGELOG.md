@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.4...v1.2.5) (2026-01-28)
+
+
+### Bug Fixes
+
+* **action:** derive action directory from import.meta.url instead of env var ([b1f7100](https://github.com/rb-mwindh/setup-npm-auth/commit/b1f7100721c2ab176093e92f59b51d8ee1eb972b))
+
 ## [1.2.4](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.3...v1.2.4) (2026-01-28)
 
 
