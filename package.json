@@ -49,6 +49,7 @@
     "commander": "^14.0.2"
   },
   "devDependencies": {
+    "@types/node": "^25.0.10",
     "@vercel/ncc": "^0.38.4"
   }
 }

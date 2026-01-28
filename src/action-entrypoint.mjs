@@ -1,5 +1,7 @@
 import * as core from '@actions/core';
 import {exec} from '@actions/exec';
+import * as process from 'node:process';
+import * as path from 'node:path';
 
 async function run() {
     const includes = core.getMultilineInput('includes', {trimWhitespace: true});
@@ -26,7 +28,14 @@ async function run() {
         args.push('--verbose');
     }
 
-    await exec(`node ./src/setup-npm-auth.mjs`, args);
+    const actionPath = process.env.GITHUB_ACTION_PATH;
+    if (!actionPath) {
+        throw new Error('GITHUB_ACTION_PATH is not defined');
+    }
+
+    const scriptPath = path.join(actionPath, 'src', 'setup-npm-auth.mjs');
+
+    await exec(process.execPath, [scriptPath, ...args]);
 }
 
 run().catch(err => {
