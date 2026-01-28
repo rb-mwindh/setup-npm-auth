@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.2...v1.2.3) (2026-01-28)
+
+
+### Bug Fixes
+
+* trigger release ([af2e38d](https://github.com/rb-mwindh/setup-npm-auth/commit/af2e38d3c418af90b3fa27ea5be70e79931890b3))
+
 ## [1.2.2](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.1...v1.2.2) (2026-01-28)
 
 
