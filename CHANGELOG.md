@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.1...v1.2.2) (2026-01-28)
+
+
+### Bug Fixes
+
+* **action:** switch entrypoint to ESM (.mjs) for node20 runtime ([90e2f0c](https://github.com/rb-mwindh/setup-npm-auth/commit/90e2f0c2062dcf1617e90b017f08bd55a89faaa4))
+
 ## [1.2.1](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.0...v1.2.1) (2026-01-28)
 
 
