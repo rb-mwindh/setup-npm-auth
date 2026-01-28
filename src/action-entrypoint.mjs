@@ -32,7 +32,7 @@ async function run() {
         args.push('--verbose');
     }
 
-    const scriptPath = path.join(__dirname, 'src', 'setup-npm-auth.mjs');
+    const scriptPath = path.join(__dirname, '..', 'src', 'setup-npm-auth.mjs');
 
     await exec(process.execPath, [scriptPath, ...args]);
 }
