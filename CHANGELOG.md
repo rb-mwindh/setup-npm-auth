@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.0...v1.2.1) (2026-01-28)
+
+
+### Bug Fixes
+
+* **action:** fix action.yml to reference correct entrypoint path ([9904df3](https://github.com/rb-mwindh/setup-npm-auth/commit/9904df3e638b1800d85ce77ba1796010b93b0bb9))
+
 # [1.2.0](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.1.1...v1.2.0) (2026-01-28)
 
 
