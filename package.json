@@ -26,6 +26,9 @@
   "engines": {
     "node": ">=18"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npx setup-npm-auth",
     "test": "echo \"Error: no test specified\" && exit 1"
