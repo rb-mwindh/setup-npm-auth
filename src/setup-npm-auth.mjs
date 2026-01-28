@@ -225,7 +225,7 @@ function registryToAuthKey(registryUrl) {
  * @param {string} str
  * @returns {string}
  */
-function unquote(str) {
+export function unquote(str) {
   if (typeof str !== 'string') return str;
   return str.replace(/^['"](.*)['"]$/, '$1');
 }
@@ -241,7 +241,7 @@ function unquote(str) {
  * @param {Array<Scope2EnvVar>} acc
  * @returns {Array<Scope2EnvVar>}
  */
-function parseInclude(val, acc) {
+export function parseInclude(val, acc) {
   const raw = unquote(String(val).trim());
   if (!raw) {
     throw new Error(`Invalid --include value "${val}".`);
@@ -358,7 +358,7 @@ async function setupRegistryAuth(registries, opts) {
  * @param {CmdOpts} opts
  * @returns {Promise<void>}
  */
-async function run(opts) {
+export async function run(opts) {
   verbose.enabled = opts.verbose;
 
   const includes = ensureIncludes(opts.include);
@@ -393,7 +393,7 @@ async function run(opts) {
 }
 
 // CLI entry point
-async function main() {
+export async function main() {
   const program = new Command()
     .name("setup-npm-auth")
     .description("Configure user-level auth tokens for npm registries.")
@@ -448,9 +448,3 @@ Examples:
 
   await program.parseAsync(process.argv);
 }
-
-main().catch(err => {
-  console.error("[ERROR]:", err?.message || err);
-  process.exit(1);
-});
-
