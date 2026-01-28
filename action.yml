@@ -2,8 +2,8 @@ name: 'Setup NPM Auth'
 description: 'Configures NPM authentication for different registries'
 author: 'Markus Windhager'
 inputs:
-  include:
-    description: 'Registries, e.g. default, publish, @scope=ENV'
+  includes:
+    description: 'Specify the registries to discover, e.g. default, publish, @scope=ENV. Allows multiline input.'
     required: false
   location:
     description: 'npm config location (user, global, project)'
