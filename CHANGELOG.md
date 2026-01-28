@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.1.1...v1.2.0) (2026-01-28)
+
+
+### Features
+
+* **action:** allow multiline data for  input ([995b6fb](https://github.com/rb-mwindh/setup-npm-auth/commit/995b6fb154853beaa77dd3b156d821e7e8ed1651))
+
 ## [1.1.1](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.1.0...v1.1.1) (2026-01-28)
 
 
