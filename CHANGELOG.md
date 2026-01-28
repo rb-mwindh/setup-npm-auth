@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.3...v1.2.4) (2026-01-28)
+
+
+### Bug Fixes
+
+* **action:** resolve setup script path via GITHUB_ACTION_PATH and use current Node binary ([3c87e7e](https://github.com/rb-mwindh/setup-npm-auth/commit/3c87e7e314cd825a8f42041c1f761c243ef72321))
+
 ## [1.2.3](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.2...v1.2.3) (2026-01-28)
 
 
