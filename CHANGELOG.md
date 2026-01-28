@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.5...v1.2.6) (2026-01-28)
+
+
+### Bug Fixes
+
+* **action:** resolve setup script relative to bundled entrypoint ([91fdeac](https://github.com/rb-mwindh/setup-npm-auth/commit/91fdeac8e6a817cf57c747561bc6d3e9bd3b6428))
+
 ## [1.2.5](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.4...v1.2.5) (2026-01-28)
 
 
