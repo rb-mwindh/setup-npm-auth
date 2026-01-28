@@ -62,12 +62,15 @@ You can use this tool as a declarative GitHub Action in your workflows:
 ```yaml
 - uses: rb-mwindh/setup-npm-auth@main
   with:
-    include: '@myscope=SCOPE_TOKEN'
     verbose: 'true'
+    includes: |
+      default
+      publish=PUBLISH_TOKEN
+      @myscope=SCOPE_TOKEN
 ```
 
 #### Action Inputs
-- `include`: Registries to include (e.g. `default`, `publish`, `@scope=ENV`)
+- `includes`: Registries to include (e.g. `default`, `publish`, `@scope=ENV`)
 - `location`: npm config location (user, global, project)
 - `dry-run`: Show what would be done, but do not execute
 - `verbose`: Show more output
