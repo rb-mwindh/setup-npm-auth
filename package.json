@@ -4,6 +4,7 @@
   "description": "CLI to discover configured npm registries write authToken to user config",
   "author": "Markus Windhager",
   "license": "MIT",
+  "private": false,
   "keywords": [
     "npm",
     "auth",
