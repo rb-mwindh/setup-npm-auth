@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.1.0...v1.1.1) (2026-01-28)
+
+
+### Bug Fixes
+
+* **workflow:** change trigger for update-floating-tag workflow ([fc65be4](https://github.com/rb-mwindh/setup-npm-auth/commit/fc65be498db573e278ffd02957f951f9fa4adaf7))
+
 # [1.1.0](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.0.0...v1.1.0) (2026-01-28)
 
 
