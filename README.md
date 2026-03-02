@@ -29,6 +29,8 @@ npx @rb-mwindh/setup-npm-auth --include default --include publish=PUBLISH_TOKEN 
   Show what would be configured, but do not write anything.
 - `-v, --verbose`  
   Show detailed output.
+- `--verify-auth`  
+  Verify authentication for all discovered registries by running `npm whoami --registry <url>` for each registry.
 
 #### Examples
 
@@ -53,6 +55,12 @@ NODE_AUTH_TOKEN=foo npx @rb-mwindh/setup-npm-auth --dry-run
 
 # Show planned configuration details before execution
 NODE_AUTH_TOKEN=foo npx @rb-mwindh/setup-npm-auth --verbose
+
+# Verify authentication for all registries
+NODE_AUTH_TOKEN=foo npx @rb-mwindh/setup-npm-auth --verify-auth
+
+# Verify authentication for a scoped registry
+SCOPE_TOKEN=abc npx @rb-mwindh/setup-npm-auth --include @myscope=SCOPE_TOKEN --verify-auth
 ```
 
 ### GitHub Action
@@ -74,6 +82,9 @@ You can use this tool as a declarative GitHub Action in your workflows:
 - `location`: npm config location (user, global, project)
 - `dry-run`: Show what would be done, but do not execute
 - `verbose`: Show more output
+- `verifyAuth`: Verify authentication for all discovered registries
+
+When `verifyAuth` is set to true, the action will run `npm whoami --registry <url>` for each discovered registry.
 
 ## Development
 

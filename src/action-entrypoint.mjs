@@ -6,6 +6,7 @@ import {parseInclude, run, unquote} from './setup-npm-auth.mjs';
     const location = core.getInput('location');
     const dryRun = core.getBooleanInput('dry-run');
     const verbose = core.getBooleanInput('verbose');
+    const verifyAuth = core.getBooleanInput('verifyAuth');
 
     /** @type {CmdOpts} */
     const opts = {
@@ -13,13 +14,18 @@ import {parseInclude, run, unquote} from './setup-npm-auth.mjs';
         dryRun: dryRun,
         location: unquote(location),
         include: [],
+        verifyAuth: verifyAuth,
     };
 
     for (const inc of includes) {
         opts.include = parseInclude(inc, opts.include)
     }
 
-    await run(opts);
+    const registries = await run(opts);
+    for (const {scope, registryUrl} of registries) {
+        core.setOutput(scope, registryUrl);
+    }
+
 })().catch(err => {
     core.error(err);
     core.setFailed(err instanceof Error ? err.message : String(err));

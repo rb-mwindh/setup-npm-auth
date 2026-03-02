@@ -16,6 +16,10 @@ inputs:
     description: 'Show more output'
     required: false
     default: 'false'
+  verifyAuth:
+    description: 'Verify authentication for all discovered registries.'
+    required: false
+    default: 'false'
 runs:
   using: 'node20'
   main: 'dist/index.mjs'
