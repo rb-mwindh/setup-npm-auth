@@ -214,10 +214,9 @@ function tryParseJson(str) {
 }
 
 function registryToAuthKey(registryUrl) {
-    const u = new URL(registryUrl);
-    let hostPath = u.host + u.pathname;
-    if (!hostPath.endsWith("/")) hostPath += "/";
-    return `//${hostPath}:_authToken`;
+    const normalized = normalizeRegistryUrl(registryUrl);
+    const u = new URL(normalized);
+    return `//${u.host}${u.pathname}:_authToken`;
 }
 
 /**
@@ -364,12 +363,30 @@ async function verifyRegistryAuth(registries) {
     verbose("\n🔐  Verifying authentication for registries:");
     for (const {scope, registryUrl} of registries) {
         try {
-            const user = await npmExec(["whoami", "--registry", registryUrl]);
+            const user = await npmExec(["whoami", "--registry", normalizeRegistryUrl(registryUrl)]);
             verbose(`   ▶ ${scope} (${registryUrl}): authenticated as ${user || "(no user)"}`);
         } catch (err) {
             throw new Error(`Authentication failed for registry`, registryUrl);
         }
     }
+}
+
+/**
+ *
+ * @param {string} input
+ * @returns {string}
+ */
+function normalizeRegistryUrl(input) {
+    const url = new URL(input.trim());
+
+    // Ensure exactly one trailing slash
+    url.pathname = url.pathname.replace(/\/?$/, "/");
+
+    // Remove search/hash just in case
+    url.search = "";
+    url.hash = "";
+
+    return url.toString();
 }
 
 /**
