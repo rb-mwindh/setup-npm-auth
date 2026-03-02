@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.3.0...v1.3.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* **action:** normalize registry URLs for authentication checks ([7cf9a4e](https://github.com/rb-mwindh/setup-npm-auth/commit/7cf9a4e058c63a6eea76524faf6997d57261672a))
+
 # [1.3.0](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.7...v1.3.0) (2026-03-02)
 
 
