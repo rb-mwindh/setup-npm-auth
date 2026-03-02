@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.7...v1.3.0) (2026-03-02)
+
+
+### Features
+
+* **action:** add verifyAuth option to check authentication for registries ([c1b4283](https://github.com/rb-mwindh/setup-npm-auth/commit/c1b4283febbe51dd8c76baf0bb911151df80d674))
+
 ## [1.2.7](https://github.com/rb-mwindh/setup-npm-auth/compare/v1.2.6...v1.2.7) (2026-01-28)
 
 
